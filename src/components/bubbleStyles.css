@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "axiforma-regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets//fonts/axiforma-regular.ttf");
+}
+
+.bubble {
+  background: #d90f0f;
+  color: #ffffff;
+  font-family: "axiforma-regular";
+  font-size: 13px;
+  line-height: 30px;
+  box-shadow: 5px 5px 9px -3px #a3a3a3;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 7px;
+  padding: 0 15px;
+  animation: ease-in animate 0.3s;
+}
+.bubble:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  z-index: 1;
+  border-style: solid;
+  border-color: #d90f0f transparent;
+  border-width: 20px 8px 0;
+  bottom: -20px;
+  left: 17%;
+  margin-left: -12px;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

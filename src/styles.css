@@ -1,0 +1,2060 @@
+@font-face {
+  font-family: "axiforma-regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/axiforma-regular.ttf");
+}
+@font-face {
+  font-family: "axiforma-semiBold";
+  font-style: normal;
+  src: url("./assets/fonts/axiforma-semiBold.ttf");
+}
+@font-face {
+  font-family: "axiforma-bold";
+  font-style: normal;
+  src: url("./assets/fonts/axiforma-bold.ttf");
+}
+@font-face {
+  font-family: "axiforma-medium";
+  font-style: normal;
+  src: url("./assets/fonts/axiformaMedium.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "axiforma-regular";
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #e5e5e5;
+}
+
+button:active {
+  opacity: 0.8;
+}
+
+.userLinkModalContainer {
+  position: fixed;
+  top: 40%;
+  width: fit-content;
+  display: none;
+  z-index: 9999;
+}
+.userLinkMainContainer {
+  width: 90%;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  padding: 18px 18px;
+}
+.publishP {
+  font-family: "axiforma-semibold";
+  font-size: 15px;
+}
+.belowP {
+  font-family: "axiforma-regular";
+  font-size: 12px;
+  color: #8b8b8b;
+}
+.userLinkModalLinkDiv {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+.userLinkModalLinkDiv p {
+  font-family: "axiforma-regular";
+  font-size: 12px;
+}
+.userLinkModalLinkDiv span {
+  background-color: #cde3f9;
+  padding: 8px 5px;
+  border-radius: 5px;
+}
+.userLinkModalLinkBtn {
+  border: none;
+  background-color: #000000;
+  width: fit-content;
+  height: 28px;
+  border-radius: 7px;
+  padding: 0px 11px;
+  cursor: pointer;
+  color: #ffffff;
+  margin-left: 10px;
+  margin-top: -5px;
+}
+.userLinkModalLinkBtn p {
+  font-family: "axiforma-semibold";
+  font-size: 10px;
+}
+.UserLinkModalpublishBtn {
+  width: 100%;
+  margin-top: 22px;
+  border: none;
+  background-color: #0671e3;
+  color: #ffffff;
+  font-family: "axiforma-semiBold";
+  font-size: 15px;
+  height: 40px;
+  border-radius: 8px;
+}
+.eyeAndLinkDiv {
+  margin-right: 2.5%;
+  margin-top: 7%;
+  font-family: "axiforma-semibold";
+  display: flex;
+  width: 140px;
+}
+
+.eyeIconContainer {
+  width: 33px;
+  height: 33px;
+  background-color: #ededed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.linkBtn {
+  border: none;
+  background-color: #ededed;
+  width: fit-content;
+  height: 33px;
+  border-radius: 7px;
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+.bgBlur {
+  filter: brightness(50%);
+  pointer-events: none;
+}
+.disable {
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg)
+    brightness(118%) contrast(119%);
+}
+.firstSectionInView {
+  margin-bottom: -25px;
+}
+.modalContainer {
+  width: 100%;
+  max-width: 600px;
+  height: fit-content;
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  transition: 1s all;
+  z-index: 9999;
+  /* animation: modalUp 0.2s ease-out;
+  -webkit-animation: modalUp 0.2s ease-out; */
+  display: none;
+  padding-top: 10px;
+  border-top-right-radius: 17px;
+  border-top-left-radius: 17px;
+}
+.bottomContainer {
+  position: relative;
+}
+.modalResetBtn {
+  border: none;
+  background: none;
+  color: red;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 13px;
+  position: absolute;
+  top: 0%;
+  right: 6%;
+  border: 2px solid red;
+  border-radius: 100px;
+  padding: 0 12px;
+}
+
+.displayBlock {
+  display: block;
+}
+
+@keyframes modalUp {
+  0% {
+    bottom: -500px;
+  }
+  100% {
+    bottom: 0;
+    position: sticky;
+  }
+}
+.modalBtnContainer {
+  display: flex;
+  flex-direction: row;
+}
+.modalCloseBtn {
+  width: 50%;
+  color: red;
+  border: none;
+  background-color: #ebebeb;
+  font-size: 14px;
+  font-family: "axiforma-semibold";
+}
+.socialIconSubmitBtn {
+  border: none;
+  background: #0671e3;
+  color: #ffffff;
+  width: 50%;
+  height: 35px;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  font-family: "axiforma-semibold";
+}
+.first {
+  font-family: "axiforma-bold";
+  font-size: 12px;
+  margin-left: 4%;
+}
+.second {
+  font-family: "axiforma-regular";
+  font-size: 10px;
+  color: #808080;
+  margin-left: 4%;
+}
+.addIconSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: 3%;
+  margin-right: 3%;
+  padding: 15px 0;
+}
+.addedIconSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin-left: 3%;
+  margin-right: 3%;
+  padding: 15px 0;
+  margin-bottom: -15px;
+}
+.iconEditSection {
+  margin-bottom: 25px;
+}
+.iconSmContainer {
+  width: 40px;
+  height: 40px;
+  max-width: 40px;
+  max-height: 40px;
+  border-radius: 10px;
+  background-color: #ebebeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addedIconContainer {
+  width: 40px;
+  height: 40px;
+  max-width: 40px;
+  max-height: 40px;
+  border-radius: 10px;
+  background-color: #ebebeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+}
+.socialIconInView {
+  width: 28px;
+  height: 28px;
+}
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #dfdfdf;
+  margin-top: 5px;
+}
+.socialListMainContainer {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+.socialEditContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #ebebeb;
+  width: 290px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 0;
+  border-radius: 8px;
+}
+.socialIcon {
+  width: 28px;
+  height: 28px;
+}
+.removeIconSocialList {
+  position: absolute;
+  width: 20px !important;
+  height: 20px !important;
+  max-height: 20px !important;
+  min-height: 20px !important;
+  right: 50px;
+  top: 7px;
+  cursor: pointer;
+  z-index: 9;
+}
+.socialListUsername {
+  font-size: 12px;
+  font-family: "axiforma-medium";
+  word-wrap: break-word;
+  width: 230px;
+  text-align: center;
+}
+
+.cardTitle[placeholder]:empty:focus::before {
+  content: "";
+}
+.cardTitle[placeholder]:empty:before {
+  font-family: "axiforma-semiBold";
+  content: attr(placeholder);
+  color: #000000;
+}
+.cardDescription[placeholder]:empty:focus::before {
+  content: "";
+}
+.cardDescription[placeholder]:empty:before {
+  font-weight: 500;
+  content: attr(placeholder);
+  color: #808080;
+}
+.name[placeholder]:empty:focus::before {
+  content: "";
+}
+.name[placeholder]:empty:before {
+  font-family: "axiforma-semiBold";
+  content: attr(placeholder);
+  color: #000000;
+}
+.bio[placeholder]:empty:focus::before {
+  content: "";
+}
+.bio[placeholder]:empty:before {
+  content: attr(placeholder);
+  color: #808080;
+}
+.girdTitle[placeholder]:empty:focus::before {
+  content: "";
+}
+.girdTitle[placeholder]:empty:before {
+  content: attr(placeholder);
+  color: #000000;
+}
+.listTitle[placeholder]:empty:focus::before {
+  content: "";
+}
+.listTitle[placeholder]:empty:before {
+  font-family: "axiforma-semiBold";
+  content: attr(placeholder);
+  color: #000000;
+}
+.gridUrl[placeholder]:empty:focus::before {
+  content: "";
+}
+.gridUrl[placeholder]:empty:before {
+  content: attr(placeholder);
+  color: #808080;
+  margin-left: -20%;
+}
+.cardUrl[placeholder]:empty:focus::before {
+  content: "";
+}
+.cardUrl[placeholder]:empty:before {
+  font-weight: 500;
+  content: attr(placeholder);
+  color: #808080;
+}
+.listUrl[placeholder]:empty:focus::before {
+  content: "";
+}
+.listUrl[placeholder]:empty:before {
+  font-weight: 500;
+  content: attr(placeholder);
+  color: #808080;
+}
+.socialListUsername[placeholder]:empty:focus::before {
+  content: "";
+}
+.socialListUsername[placeholder]:empty:before {
+  font-family: "axiforma-medium";
+  content: attr(placeholder);
+  color: #000000;
+}
+
+.spinner {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20%;
+}
+
+.d-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.coverPhotoContainer {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+}
+.firstSection {
+  margin-bottom: -25px;
+}
+.cameraIconForCover {
+  position: absolute;
+  bottom: 24px;
+  right: 15px;
+}
+
+.container {
+  width: 425px;
+  min-height: 100vh;
+  height: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+  padding-bottom: 100px;
+}
+.userLinkModalContainer {
+  max-width: 425px;
+  width: 425px;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+.coverPhoto {
+  width: 100%;
+  max-width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+}
+
+.DpAndNameContainer {
+  margin-left: 7%;
+  margin-top: 10px;
+}
+
+.nameContainerWithoutDpCover {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
+}
+.dpAndNameContainerWithoutDpCover {
+  text-align: center;
+  padding-top: 73px;
+  padding-bottom: 22px;
+}
+.dpAndNameContainerWithoutDpCover h1 {
+  font-family: "axiforma-semibold";
+  font-size: 18px;
+}
+.dpAndNameContainerWithoutDpCover h5 {
+  font-family: "axiforma-regular";
+  font-size: 10px;
+  color: #808080;
+  font-weight: 400;
+  margin-top: -25px;
+}
+
+.dpContainer {
+  width: 82px;
+  max-width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid white;
+  flex: 1;
+}
+
+.bio {
+  display: inline-block;
+  width: 150px;
+  max-width: 300px;
+}
+
+.cameraIconForDp {
+  position: absolute;
+  bottom: 4px;
+  right: -5px;
+}
+
+.dpContainerWithoutCover {
+  margin-top: 58px;
+  margin-bottom: 22px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid gray;
+  border-radius: 50%;
+}
+
+.usernameContainer {
+  margin-left: 5%;
+  cursor: pointer;
+}
+.usernameContainer h1 {
+  font-family: "axiforma-semiBold";
+}
+
+.dpNameWithoutCover {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+  margin-top: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 22px;
+}
+.usernameContainerWithoutCover {
+  margin-left: 0;
+  text-align: center;
+}
+.usernameContainerWithoutCover h1 {
+  font-family: "axiforma-semiBold";
+}
+.usernameContainerWithoutCover h5 {
+  font-weight: 400;
+  margin-top: -15px;
+  color: #808080;
+}
+
+.usernameContainer h5 {
+  font-weight: 400;
+  margin-top: -24px;
+  color: #808080;
+}
+
+.nameDivInEdit {
+  width: 250px;
+  max-width: 250px;
+  word-wrap: break-word;
+}
+.descriptionDivInEdit {
+  width: 250px;
+  max-width: 250px;
+  word-wrap: break-word;
+  margin-top: -25px;
+}
+
+.profilePhoto {
+  width: 36px;
+  height: 36px;
+}
+.profilePhotoScaled {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1.5px solid #ffffff;
+}
+
+.socialIconContainer {
+  width: 35px;
+  height: 35px;
+  background-color: #c4c4c4;
+  border: 2px dashed rgb(80, 79, 79);
+  border-radius: 50%;
+}
+
+.socialMediaIconSection {
+}
+.socialMediaLinksContainer {
+  margin-top: 46px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  justify-content: space-evenly;
+}
+.SmSectionHeading {
+  font-weight: 500;
+  text-align: center;
+  color: #808080;
+  font-size: 21px;
+  margin-top: 25px;
+}
+
+.thirdSection {
+  width: 400px;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.thirdSectionMainContainer {
+  background-color: #ebebeb;
+  margin-top: 23px;
+  border-radius: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.thirdSectionMainContainerWithoutPadding {
+  background-color: #ebebeb;
+  margin-top: 23px;
+  border-radius: 10px;
+  position: relative;
+}
+.cardResetButton {
+  color: #000000;
+  background-color: #c4c4c4;
+  font-size: 12px;
+  font-family: "axiforma-bold";
+  width: 75px;
+  padding: 5px 0;
+  font-weight: 500;
+  border: none;
+  border-radius: 7px;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  top: 125px;
+  right: 50px;
+  /* background-color: #0671E3; */
+}
+.coverResetButton {
+  color: #000000;
+  background-color: #c4c4c4;
+  font-size: 12px;
+  font-family: "axiforma-bold";
+  width: 75px;
+  padding: 5px 0;
+  font-weight: 500;
+  border: none;
+  border-radius: 7px;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  top: 130px;
+  right: 50px;
+  /* background-color: #0671E3; */
+}
+
+.thirdSectionImageContainer {
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.cameraIconForHolderCard {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+.thirdSectionImage {
+  width: 400px;
+  max-height: 180px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  object-fit: cover;
+}
+
+.thirdSectionContentContainer {
+  margin-left: 8%;
+  margin-top: -10px;
+  cursor: pointer;
+}
+.thirdSectionHeadingContainer {
+  flex: 1;
+}
+.thirdSectionContentContainer h5 {
+  color: #808080;
+}
+.cardUrl {
+  font-weight: 500;
+  width: fit-content;
+  max-width: 350px;
+}
+.fourthSection {
+  width: 400px;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 90px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.mt {
+  margin-top: 30px;
+}
+.fourthSection div {
+  width: 180px;
+  height: fit-content;
+  padding-bottom: 5px;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+.Boxshadow {
+  box-shadow: 0.5px 0.5px 8px rgb(172, 170, 170);
+  position: relative;
+}
+.fourthSectionImgDiv {
+  width: 180px;
+  height: 200px;
+  position: relative;
+}
+.fourthSection img {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+#cameraIconForHolderGridOne {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  min-height: 30px;
+  max-height: 30px;
+  min-width: 30px;
+  max-width: 30px;
+  bottom: 26px;
+  right: 10px;
+}
+
+.fourthSectionContentContainer h3 {
+  text-align: center;
+}
+.gridTitleInView {
+  /* background-color: red; */
+  word-wrap: break-word;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.holderGridUrlLabel {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.fourthSectionContentContainer {
+  width: 100%;
+  text-align: center;
+}
+.gridUrl {
+  font-size: 12px;
+  width: 90px;
+  max-width: 90px;
+  color: #808080;
+}
+.listUrl {
+  color: #808080;
+  width: 200px;
+  word-wrap: break-word;
+  max-width: 200px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.lastSection {
+  margin-top: 30px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.lastSectionMainContainer {
+  justify-content: space-between;
+  position: relative;
+  margin-top: 15px;
+}
+.lastSectionMainContainerWithoutMargin {
+  justify-content: space-between;
+  position: relative;
+  margin-top: -100px;
+}
+
+.lastSectionImageDiv {
+  position: relative;
+}
+
+.cameraIconForHolderList {
+  position: absolute;
+  bottom: 10px;
+  right: -2px;
+}
+
+.lastSectionImage {
+  width: 60px;
+  height: 60px;
+  max-width: 60px;
+  max-height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.lastSectionContentContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #ebebeb;
+  width: 300px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0;
+  border-radius: 10px;
+  margin-top: -1.5px;
+  position: relative;
+}
+
+.lastSectionContentContainer h2 {
+  text-align: center;
+}
+.lastSectionContentContainer img {
+  width: 22px;
+  height: 22px;
+}
+.d-none {
+  display: none;
+}
+
+.button {
+  color: #0671e3;
+  font-size: 22px;
+  font-family: "axiforma-regular";
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 190px;
+  margin-top: 20px;
+  padding: 10px 5px;
+  font-weight: 700;
+  border-radius: 12px;
+  border: 3.5px solid #0671e3;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  float: right;
+  margin-right: 60px;
+}
+.button:active {
+  opacity: 0.8;
+}
+.button img {
+  width: 22px;
+  height: 22px;
+  margin-top: -5px;
+}
+.removeIcon {
+  position: absolute;
+  width: 32px !important;
+  height: 32px !important;
+  max-height: 32px !important;
+  min-height: 32px !important;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.removeIconForList {
+  position: absolute;
+  width: 32px !important;
+  height: 32px !important;
+  max-height: 32px !important;
+  min-height: 32px !important;
+  right: 10px;
+  top: 8px;
+  cursor: pointer;
+  z-index: 9;
+}
+.ml {
+  margin-left: 20px;
+}
+
+.holderGridOneNTwoContentContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 15px;
+  max-width: 160px;
+}
+
+.finalSubmitBtnContainer {
+  width: 425;
+  max-width: 425px;
+  height: 85px;
+  max-height: 85px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.boxShadow {
+  box-shadow: 1px 1px 17px -4px rgba(133, 133, 133, 0.68);
+  -webkit-box-shadow: 1px 1px 17px -4px rgba(110, 110, 110, 0.68);
+  -moz-box-shadow: 1px 1px 17px -4px rgba(116, 116, 116, 0.68);
+}
+.doneBtn {
+  margin-left: 3%;
+  margin-top: 6%;
+  font-family: "axiforma-semibold";
+  padding-top: 2.5px;
+}
+.cancelBtn {
+  margin-right: 3%;
+  margin-top: 8%;
+  font-family: "axiforma-semibold";
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 600px;
+  }
+  .userLinkModalContainer {
+    max-width: 600px;
+    width: 600px;
+  }
+
+  .DpAndNameContainer {
+    margin-left: 18%;
+    margin-top: 10px;
+  }
+  .removeIconForList {
+    position: absolute;
+    width: 25px !important;
+    height: 25px !important;
+    max-height: 25px !important;
+    min-height: 25px !important;
+    right: 10px;
+    top: 15px;
+    cursor: pointer;
+    z-index: 9;
+  }
+  .dpContainer {
+    width: 120px;
+    max-width: 120px;
+    height: 120px;
+    bottom: 50px;
+  }
+  .cameraIconForDp {
+    position: absolute;
+    bottom: 5px;
+    right: 0px;
+  }
+  .cameraIconForHolderCard {
+    position: absolute;
+    bottom: 32px;
+    right: 15px;
+  }
+
+  .usernameContainer {
+    margin-left: 8%;
+    margin-top: 10px;
+  }
+  .spinner {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+  }
+  .nameDivInEdit {
+    width: 300px;
+    max-width: 300px;
+    word-wrap: break-word;
+  }
+  .descriptionDivInEdit {
+    width: 300px;
+    max-width: 300px;
+    word-wrap: break-word;
+  }
+
+  .socialIconContainer {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+  }
+  .thirdSection {
+    width: 480px;
+  }
+
+  .thirdSectionTitle {
+    display: block;
+    width: fit-content;
+    max-width: 300px;
+  }
+  #cardTitleInEdit {
+    font-family: "axiforma-semiBold";
+    width: 400px;
+    max-width: 400px;
+    word-wrap: break-word;
+  }
+  #cardDescriptionInEdit {
+    font-weight: 500;
+    width: 400px;
+    max-width: 400px;
+    word-wrap: break-word;
+  }
+
+  .cardUrl {
+    width: 420px;
+    max-width: 420px;
+    /* margin-top: 2px; */
+  }
+  .thirdSectionImageContainer {
+    width: 480px;
+    height: 260px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+  }
+  .thirdSectionContentContainer {
+    margin-top: 10px;
+  }
+  .thirdSectionImage {
+    width: 100%;
+    height: 250px;
+    max-height: 280px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+  }
+  .gridUrl {
+    margin-top: 2.5px;
+  }
+  .fourthSection {
+    width: 475px;
+    height: fit-content;
+  }
+  .fourthSection div {
+    width: 210px;
+  }
+  .gridTitleInView {
+    /* background-color: red; */
+    word-wrap: break-word;
+    width: 170px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .lastSection {
+    width: 475px;
+  }
+
+  .lastSectionImage {
+    width: 75px;
+    height: 75px;
+  }
+
+  .listTitleInView {
+    text-align: center;
+    font-family: "axiforma-semiBold";
+    word-wrap: break-word;
+    width: 300px;
+    cursor: pointer;
+  }
+  .listUrl {
+    color: #808080;
+    width: 300px;
+    word-wrap: break-word;
+    max-width: 300px;
+    margin-top: 4px;
+    cursor: pointer;
+  }
+
+  .lastSectionContentContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #ebebeb;
+    width: 340px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 14px 0;
+    border-radius: 14px;
+  }
+  .listWithoutImage {
+    display: flex;
+    flex-direction: column;
+    background-color: #ebebeb;
+    width: 475px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 14px 0;
+    border-radius: 10px;
+  }
+  .lasSectionContentContainerInView {
+    padding: 16px 0;
+    margin-top: 10px;
+  }
+  .fourthSectionImgDiv {
+    width: 180px;
+    height: 180px;
+  }
+  .fourthSection img {
+    width: 100%;
+    height: 100%;
+    min-height: 180px;
+    max-height: 180px;
+  }
+
+  .holderGridOneNTwoContentContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 22px;
+    max-width: 180px;
+  }
+  .listTitle {
+    font-family: "axiforma-semiBold";
+    width: 280px;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  .cardDescription {
+    font-weight: 500;
+    width: 350px;
+    max-width: 400px;
+  }
+
+  .cardTitle {
+    font-family: "axiforma-semiBold";
+    width: 350px;
+    max-width: 400px;
+  }
+
+  .girdTitle {
+    width: 170px;
+    max-width: 170px;
+    margin-right: 8%;
+  }
+  .gridUrl {
+    width: 140px;
+    max-width: 140px;
+    color: #808080;
+  }
+  .name {
+    width: 320px;
+    max-width: 320px;
+  }
+
+  .bio {
+    width: 320px;
+    max-width: 320px;
+  }
+
+  .finalSubmitBtnContainer {
+    width: 600px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0;
+    background-color: #ffffff;
+  }
+  .doneBtn {
+    margin-right: 4%;
+    border: none;
+    background: #0671e3;
+    color: #ffffff;
+    width: 81px;
+    height: 35px;
+    border-radius: 100px;
+    cursor: pointer;
+    margin-top: 3%;
+  }
+  .cancelBtn {
+    margin-left: 4%;
+    border: none;
+    background: none;
+    color: red;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 5%;
+  }
+  .coverResetButton {
+    color: #000000;
+    background-color: #c4c4c4;
+    font-size: 12px;
+    font-family: "axiforma-bold";
+    width: 75px;
+    padding: 5px 0;
+    font-weight: 500;
+    border: none;
+    border-radius: 7px;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    top: 294px;
+    right: 50px;
+    margin-right: 10px;
+    /* background-color: #0671E3; */
+  }
+  .cardResetButton {
+    color: #000000;
+    background-color: #c4c4c4;
+    font-size: 12px;
+    font-family: "axiforma-bold";
+    width: 75px;
+    padding: 5px 0;
+    font-weight: 500;
+    border: none;
+    border-radius: 7px;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    top: 199px;
+    right: 50px;
+    margin-right: 10px;
+    /* background-color: #0671E3; */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .usernameContainer h1 {
+    font-size: 19px;
+  }
+  .removeIconSocialList {
+    position: absolute;
+    width: 20px !important;
+    height: 20px !important;
+    max-height: 20px !important;
+    min-height: 20px !important;
+    right: 44px;
+    top: 7px;
+    cursor: pointer;
+    z-index: 9;
+  }
+  .cardResetButton {
+    color: #000000;
+    background-color: #c4c4c4;
+    font-size: 12px;
+    font-family: "axiforma-bold";
+    width: 75px;
+    padding: 4px 0;
+    font-weight: 500;
+    border: none;
+    border-radius: 7px;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    top: 135.5px;
+    right: 50px;
+    margin-right: 5px;
+    /* background-color: #0671E3; */
+  }
+  .coverResetButton {
+    color: #000000;
+    background-color: #c4c4c4;
+    font-size: 12px;
+    font-family: "axiforma-bold";
+    width: 75px;
+    padding: 4px 0;
+    font-weight: 500;
+    border: none;
+    border-radius: 7px;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    top: 135px;
+    right: 50px;
+    margin-right: 5px;
+    /* background-color: #0671E3; */
+  }
+
+  .button {
+    margin-right: 25px;
+    padding: 7px 5px;
+    width: 150px;
+    font-size: 16px;
+    border-radius: 12px;
+  }
+  .thirdSectionImageContainer {
+    width: 400px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+  }
+  .thirdSectionHeadingContainer {
+    margin-top: 20px;
+  }
+  .listTitle {
+    font-family: "axiforma-semiBold";
+    width: 260px;
+    max-width: 260px;
+    text-align: center;
+  }
+  .removeIconForList {
+    position: absolute;
+    width: 20px !important;
+    height: 20px !important;
+    max-height: 20px !important;
+    min-height: 20px !important;
+    right: 5px;
+    top: 25px;
+    cursor: pointer;
+    z-index: 9;
+  }
+
+  .dpContainer {
+    width: 100px;
+    max-width: 100px;
+    height: 100px;
+    bottom: 35px;
+  }
+
+  .cardDescription {
+    font-weight: 500;
+    width: 350px;
+    max-width: 350px;
+  }
+
+  .cardTitle {
+    font-family: "axiforma-semiBold";
+    width: 350px;
+    max-width: 350px;
+    font-size: 18px;
+  }
+  .cardUrl {
+    width: 350px;
+    max-width: 350px;
+  }
+  #cardTitleInEdit {
+    font-family: "axiforma-semiBold";
+    width: 340px;
+    max-width: 340px;
+    word-wrap: break-word;
+    font-size: 18px;
+  }
+  #cardDescriptionInEdit {
+    font-weight: 500;
+    width: 340px;
+    max-width: 340px;
+    word-wrap: break-word;
+  }
+  .listTitleInView {
+    font-family: "axiforma-semiBold";
+    word-wrap: break-word;
+    width: 250px;
+    text-align: center;
+    font-size: 18px;
+  }
+  .listTitle {
+    font-size: 18px;
+  }
+  .lasSectionContentContainerInView {
+    padding: 18px 0;
+    margin-top: 5.5px;
+  }
+  .listWithoutImage {
+    display: flex;
+    flex-direction: column;
+    background-color: #ebebeb;
+    width: 400px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 19px 0;
+    border-radius: 10px;
+  }
+
+  .girdTitle {
+    width: 140px;
+    max-width: 140px;
+  }
+  .gridUrl {
+    font-size: 10px;
+    width: 90px;
+    max-width: 90px;
+    color: #808080;
+  }
+  .gridUrl[placeholder]:empty:before {
+    content: attr(placeholder);
+    color: #808080;
+  }
+  .girdTitle {
+    margin-right: 5%;
+  }
+  .holderGridUrlLabel {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .name {
+    width: 260px;
+    max-width: 260px;
+  }
+  .SmSectionHeading {
+    font-size: 18px;
+  }
+  .listUrl {
+    width: 280px;
+    max-width: 280px;
+  }
+
+  .bio {
+    width: 260px;
+    max-width: 260px;
+  }
+  .finalSubmitBtnContainer {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 0;
+    background-color: #ffffff;
+  }
+  .doneBtn {
+    margin-right: 4%;
+    border: none;
+    background: #0671e3;
+    color: #ffffff;
+    width: 81px;
+    height: 35px;
+    border-radius: 100px;
+    cursor: pointer;
+    margin-top: 6%;
+    font-size: 14px;
+    text-align: center;
+  }
+  .cancelBtn {
+    margin-left: 4%;
+    border: none;
+    background: none;
+    color: red;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: "axiforma-semiBold";
+    margin-top: 8%;
+    font-size: 14px;
+  }
+  .spinner {
+    margin-top: 55%;
+  }
+  .coverPhoto {
+    max-height: 180px;
+  }
+}
+@media only screen and (width: 768px) {
+  .button {
+    margin-right: 60px;
+    font-size: 22px;
+    width: 190px;
+    padding: 8px 5px;
+  }
+  .spinner {
+    margin-top: 28%;
+  }
+  .thirdSectionImageContainer {
+    width: 480px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+  }
+  .thirdSectionHeadingContainer {
+    margin-top: 75px;
+  }
+  #cardTitleInEdit {
+    font-family: "axiforma-semiBold";
+    width: 400px;
+    max-width: 400px;
+    word-wrap: break-word;
+  }
+  #cardDescriptionInEdit {
+    font-weight: 500;
+    width: 400px;
+    max-width: 400px;
+    word-wrap: break-word;
+  }
+  .cardTitle {
+    width: 420px;
+    max-width: 420px;
+  }
+  .cardDescription {
+    width: 420px;
+    max-width: 420px;
+  }
+  .cardUrl {
+    width: 420px;
+    max-width: 420px;
+  }
+  .listUrl {
+    width: 330px;
+    max-width: 330px;
+    margin-top: 0px;
+  }
+  .name {
+    width: 330px;
+    max-width: 330px;
+    font-size: 18px !important;
+    font-family: "axiforma-semiBold";
+    font-weight: 700;
+  }
+  .doneBtn {
+    margin-top: 4%;
+  }
+  .cancelBtn {
+    margin-top: 5%;
+  }
+
+  .bio {
+    width: 330px;
+    max-width: 330px;
+  }
+  .coverPhoto {
+    max-height: 250px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .container {
+    width: 375px;
+    box-sizing: border-box;
+  }
+  .userLinkModalContainer {
+    max-width: 375px;
+    width: 375px;
+  }
+  .cardResetButton {
+    color: #000000;
+    background-color: #c4c4c4;
+    font-size: 12px;
+    font-family: "axiforma-bold";
+    width: 75px;
+    padding: 4px 0;
+    font-weight: 500;
+    border: none;
+    border-radius: 7px;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    top: 125.5px;
+    right: 50px;
+    /* background-color: #0671E3; */
+  }
+  .addedIconContainer {
+    width: 40px;
+    height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 10px;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+  }
+  .spinner {
+    margin-top: 58%;
+  }
+  .coverPhoto {
+    max-height: 164px;
+  }
+  .usernameContainer h5 {
+    font-size: 11px;
+    /* margin-top: -20px; */
+  }
+  .dpContainer {
+    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
+    height: 80px;
+    max-height: 80px;
+  }
+
+  .nameDivInEdit {
+    width: 250px;
+    max-width: 250px;
+    word-wrap: break-word;
+    font-family: "axiforma-semiBold";
+    font-size: 18px !important;
+    font-weight: 700;
+  }
+  .nameDivInEdit h1 {
+    font-family: "axiforma-semiBold";
+    font-size: 18px;
+  }
+  .descriptionDivInEdit {
+    width: 250px;
+    max-width: 250px;
+    word-wrap: break-word;
+    /* text-align: center; */
+    margin-top: -25px;
+  }
+
+  .descriptionDivInEdit h5 {
+    font-family: "axiforma-regular";
+    font-size: 10px;
+  }
+
+  .usernameContainer h1 {
+    font-family: "axiforma-semiBold";
+    font-size: 18px;
+  }
+  .thirdSection {
+    width: 350px;
+  }
+  .thirdSectionImageContainer {
+    width: 350px;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #cardTitleInEdit {
+    font-family: "axiforma-bold";
+    width: 300px;
+    max-width: 300px;
+    word-wrap: beak-word;
+    font-size: 15px !important;
+    font-weight: 800;
+  }
+  #cardDescriptionInEdit {
+    font-weight: 500;
+    width: 300px;
+    max-width: 300px;
+    word-wrap: break-word;
+    font-size: 10px !important;
+  }
+  .cardUrl {
+    width: 300px;
+    max-width: 300px;
+    font-size: 10px !important;
+  }
+  .thirdSectionImage {
+    width: 100%;
+  }
+  .thirdSectionHeadingContainer {
+    margin-top: 20px;
+  }
+  .thirdSectionHeadingContainer h1 {
+    font-size: 18px;
+  }
+  .thirdSectionHeadingContainer h5 {
+    font-size: 11px;
+  }
+  .listTitle {
+    font-family: "axiforma-semibold" !important;
+    width: 230px;
+    text-align: center;
+    max-width: 230px;
+    font-size: 15px !important;
+    font-weight: 500;
+  }
+
+  .listTitleInView {
+    font-family: "axiforma-semibold";
+    word-wrap: break-word;
+    width: 220px;
+    text-align: center;
+    font-size: 15px !important;
+    /* font-weight: 600; */
+  }
+  .listUrl {
+    color: #808080;
+    width: 230px;
+    word-wrap: break-word;
+    max-width: 230px;
+    font-size: 10px !important;
+  }
+
+  .cardDescription {
+    font-weight: 500;
+    width: 300px;
+    max-width: 300px;
+    font-size: 10px !important;
+  }
+
+  .cardTitle {
+    font-family: "axiforma-bold" !important;
+    width: 300px;
+    max-width: 300px;
+    font-size: 15px !important;
+    font-weight: 800;
+  }
+
+  .girdTitle {
+    width: 110px;
+    max-width: 110px;
+    margin-right: 5%;
+  }
+  .gridUrl {
+    width: 90px;
+    max-width: 90px;
+    color: #808080;
+  }
+  .gridUrl[placeholder]:empty:before {
+    content: attr(placeholder);
+    color: #808080;
+    margin-left: -5%;
+  }
+  .name {
+    width: 240px;
+    max-width: 240px;
+    font-family: "axiforma-semiBold";
+    font-size: 18px !important;
+    font-weight: 700;
+  }
+
+  .bio {
+    width: 240px;
+    max-width: 240px;
+  }
+  .button {
+    font-size: 13px;
+    width: 120px;
+    padding: 6px 3px;
+    margin-right: 10px;
+    border-radius: 9px;
+    border: 2.8px solid #0671e3;
+  }
+  .button img {
+    width: 15px;
+    height: 15px;
+    margin-top: -3px;
+    color: #0671e3;
+  }
+  .fourthSection {
+    width: 350px;
+    height: fit-content;
+  }
+  .fourthSection div {
+    width: 160px;
+    height: fit-content;
+  }
+  .fourthSectionImgDiv {
+    width: 140px;
+    height: 150px;
+    padding-bottom: 0;
+  }
+  .fourthSection img {
+    width: 100%;
+    height: 100%;
+    min-height: 150px;
+    max-height: 150px;
+  }
+  .fourthSectionContentContainer {
+    padding-bottom: -20px;
+  }
+  .fourthSectionContentContainer h3 {
+    font-size: 16px;
+  }
+  .lastSection {
+    width: 350px;
+  }
+  .lastSectionImage {
+    width: 50px;
+    height: 50px;
+    max-width: 50px;
+    max-height: 50px;
+    margin-left: 14.5px;
+  }
+  .lastSectionContentContainer {
+    width: 270px;
+  }
+  .listWithoutImage {
+    display: flex;
+    flex-direction: column;
+    background-color: #ebebeb;
+    width: 350px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 19px 0;
+    border-radius: 10px;
+  }
+  .lastSectionContentContainer h3 {
+    text-align: center;
+    font-size: 16px;
+  }
+  .holderGridOneNTwoContentContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 15px;
+    max-width: 140px;
+  }
+  .SmSectionHeading {
+    font-size: 15px;
+  }
+  .lasSectionContentContainerInView {
+    margin-top: 3.3px;
+  }
+  .removeIconSocialList {
+    position: absolute;
+    width: 20px !important;
+    height: 20px !important;
+    max-height: 20px !important;
+    min-height: 20px !important;
+    right: 26px;
+    top: 7px;
+    cursor: pointer;
+    z-index: 9;
+  }
+}
+@media only screen and (max-width: 374px) {
+  .container {
+    width: 320px;
+  }
+  .userLinkModalContainer {
+    max-width: 320px;
+    width: 320px;
+  }
+  .spinner {
+    margin-top: 65%;
+  }
+  .coverPhoto {
+    max-height: 220px;
+  }
+  .nameDivInEdit {
+    width: 170px;
+    max-width: 170px;
+    word-wrap: break-word;
+  }
+  .descriptionDivInEdit {
+    width: 170px;
+    max-width: 170px;
+    word-wrap: break-word;
+  }
+  .thirdSection {
+    width: 295px;
+  }
+
+  #cardTitleInEdit {
+    font-family: "axiforma-semiBold";
+    width: 250px;
+    max-width: 250px;
+    word-wrap: beak-word;
+  }
+  #cardDescriptionInEdit {
+    font-weight: 500;
+    width: 250px;
+    max-width: 250px;
+    word-wrap: break-word;
+  }
+  .cardUrl {
+    width: fit-content;
+    max-width: 245px;
+    font-size: 10px !important;
+  }
+  .thirdSectionImageContainer {
+    width: 295px;
+  }
+  .fourthSection {
+    width: 295px;
+  }
+  .gridTitleInView {
+    /* background-color: red; */
+    word-wrap: break-word;
+    width: 135px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .gridUrl {
+    width: 78px;
+    max-width: 78px;
+    color: #808080;
+  }
+  .gridUrl[placeholder]:empty:before {
+    content: attr(placeholder);
+    color: #808080;
+    margin-left: -4.5%;
+  }
+  .fourthSection div {
+    width: 140px;
+  }
+  .lastSection {
+    width: 300px;
+  }
+  .lastSectionImage {
+    width: 50px;
+    height: 50px;
+    max-width: 50px;
+    max-height: 50px;
+  }
+  .lastSectionContentContainer {
+    width: 220px;
+  }
+  .listWithoutImage {
+    display: flex;
+    flex-direction: column;
+    background-color: #ebebeb;
+    width: 300px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 19px 0;
+    border-radius: 10px;
+  }
+  .lastSectionContentContainer h3 {
+    text-align: center;
+    font-size: 16px;
+  }
+  .holderGridOneNTwoContentContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 10px;
+    max-width: 125px;
+  }
+  .listTitle {
+    font-family: "axiforma-semiBold";
+    width: 200px;
+    text-align: center;
+    max-width: 200px;
+  }
+
+  .listTitleInView {
+    font-family: "axiforma-semiBold";
+    text-align: center;
+
+    word-wrap: break-word;
+    width: 200px;
+  }
+
+  .cardUrl {
+    width: 260px;
+    max-width: 260px;
+  }
+  .cardDescription {
+    font-weight: 500;
+    width: 260px;
+    max-width: 260px;
+  }
+
+  .cardTitle {
+    font-family: "axiforma-semiBold";
+    width: 260px;
+    max-width: 260px;
+  }
+
+  .girdTitle {
+    width: 100px;
+    max-width: 100px;
+  }
+  .name {
+    width: 190px;
+    max-width: 190px;
+  }
+
+  .bio {
+    width: 190px;
+    max-width: 190px;
+  }
+  .listUrl {
+    width: 200px;
+    max-width: 200px;
+    font-size: 10px !important;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .coverPhoto {
+    max-height: 164px;
+  }
+  .coverResetButton {
+    color: #000000;
+    background-color: #c4c4c4;
+    font-size: 12px;
+    font-family: "axiforma-bold";
+    width: 75px;
+    padding: 4px 0;
+    font-weight: 500;
+    border: none;
+    border-radius: 7px;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    top: 120.5px;
+    right: 50px;
+    /* background-color: #0671E3; */
+  }
+}
+@media only screen and (min-width: 380px) {
+  .addedIconContainer {
+    width: 40px;
+    height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 10px;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1.5%;
+    margin-right: 2.8%;
+  }
+}
+@media only screen and (max-width: 420px) and (min-width: 376px) {
+  .removeIconSocialList {
+    right: 35px;
+  }
+  .userLinkMainContainer {
+    margin-left: 6%;
+    margin-right: auto;
+  }
+}
+@media only screen and (min-width: 602px) {
+  .modalContainer {
+  }
+}
+
+@media only screen and (max-width: 381px) and (min-width: 376px) {
+  .userLinkMainContainer {
+    margin-left: 6%;
+    margin-right: auto;
+  }
+}
+@media only screen and (max-width: 419px) and (min-width: 382px) {
+  .userLinkMainContainer {
+    margin-left: 7%;
+    margin-right: auto;
+  }
+}
+@media only screen and (max-width: 391px) and (min-width: 382px) {
+  .userLinkMainContainer {
+    margin-left: 7%;
+    margin-right: auto;
+  }
+}
+@media only screen and (max-width: 400px) and (min-width: 391px) {
+  .userLinkMainContainer {
+    margin-left: 8%;
+    margin-right: auto;
+  }
+}
+@media only screen and (max-width: 409px) and (min-width: 401px) {
+  .userLinkMainContainer {
+    margin-left: 9%;
+    margin-right: auto;
+  }
+}
+@media only screen and (max-width: 419px) and (min-width: 409px) {
+  .userLinkMainContainer {
+    margin-left: 10%;
+    margin-right: auto;
+  }
+}
